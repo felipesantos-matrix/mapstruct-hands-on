@@ -2,6 +2,8 @@ package com.matrix.mapstruct.hands.on.service;
 
 import com.matrix.java.dto.lib.ResponseDTO;
 import com.matrix.mapstruct.hands.on.domain.dto.ClientDataDTO;
+import com.matrix.mapstruct.hands.on.domain.mapper.ClientDataMapper;
+import com.matrix.mapstruct.hands.on.domain.mapper.ProductMapper;
 import com.matrix.mapstruct.hands.on.domain.model.ClientData;
 import com.matrix.mapstruct.hands.on.repository.ClientDataRepository;
 import lombok.AllArgsConstructor;
@@ -13,7 +15,9 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class ClientDataService {
 
-    ClientDataRepository repository;
+    private final ClientDataRepository repository;
+
+    private final ClientDataMapper mapper;
 
     public ResponseDTO<ClientDataDTO> getClientData() {
         ClientDataDTO clientDataDTO = clientDataDTOTransformer(repository.findClientData());

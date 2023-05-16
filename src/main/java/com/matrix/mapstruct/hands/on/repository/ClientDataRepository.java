@@ -3,11 +3,9 @@ package com.matrix.mapstruct.hands.on.repository;
 import com.matrix.mapstruct.hands.on.domain.model.ClientData;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@NoArgsConstructor
 @AllArgsConstructor
 public class ClientDataRepository {
 
