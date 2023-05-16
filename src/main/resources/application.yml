@@ -2,14 +2,14 @@ spring:
   profiles:
     active: dev
   application:
-    name: matrix.aneel.query.api
+    name: matrix.mapstruct.hands.on
   config:
     import: configserver:https://dev-app.matrixenergia.com/config-server-api
 ---
 spring:
   cloud:
     config:
-      name: matrix.aneel.query.api
+      name: matrix.mapstruct.hands.on
       label: dev
   config:
     import: configserver:https://dev-app.matrixenergia.com/config-server-api

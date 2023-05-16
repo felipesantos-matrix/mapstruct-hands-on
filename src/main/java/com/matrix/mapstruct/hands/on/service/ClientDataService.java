@@ -3,7 +3,6 @@ package com.matrix.mapstruct.hands.on.service;
 import com.matrix.java.dto.lib.ResponseDTO;
 import com.matrix.mapstruct.hands.on.domain.dto.ClientDataDTO;
 import com.matrix.mapstruct.hands.on.domain.mapper.ClientDataMapper;
-import com.matrix.mapstruct.hands.on.domain.mapper.ProductMapper;
 import com.matrix.mapstruct.hands.on.domain.model.ClientData;
 import com.matrix.mapstruct.hands.on.repository.ClientDataRepository;
 import lombok.AllArgsConstructor;
