@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: matrix.mapstruct.hands.on
+  config:
+    import: configserver:https://dev-app.matrixenergia.com/config-server-api
+---
+spring:
+  cloud:
+    config:
+      name: matrix.mapstruct.hands.on
+      label: dev
+  config:
+    import: configserver:https://dev-app.matrixenergia.com/config-server-api
+    activate:
+      on-profile: dev
+---
+
+server:
+  servlet:
+    contextPath: /api
+  port: ${PORT:8080}
+
+spring.mvc.pathmatch.matching-strategy: ant-path-matcher

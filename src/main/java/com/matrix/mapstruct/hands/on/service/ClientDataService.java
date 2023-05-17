@@ -21,6 +21,7 @@ public class ClientDataService {
     }
 
     private ClientDataDTO clientDataDTOTransformer(ClientData clientData) {
-        return mapper.modelToDTO(clientData);
+        return null;
+//        return mapper.modelToDTO(clientData);
     }
 }
