@@ -14,7 +14,7 @@ public interface ClientDataMapper {
     @Mapping(target = "desconto", source = "firstPurchase", qualifiedByName = "calculadoraDesconto")
     @Mapping(target = "listaDesejo", source = "wishlist")
     @Mapping(target = "favoriteProductName", source = "favoriteProduct.name")
-    ClientDataDTO modelToDTO(ClientData clientData);
+    ClientDataDTO clientDataToDTO(ClientData clientData);
 
     @Named("calculadoraDesconto")
     default Long calculadoraDesconto(Boolean firstPurchase) {

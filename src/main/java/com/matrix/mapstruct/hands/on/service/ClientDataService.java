@@ -19,12 +19,11 @@ public class ClientDataService {
     private final ClientDataMapper mapper;
 
     public ResponseDTO<ClientDataDTO> getClientData() {
-        ClientDataDTO clientDataDTO = clientDataDTOTransformer(repository.findClientData());
+        ClientDataDTO clientDataDTO = clientDataDTOConverter(repository.findClientData());
         return new ResponseDTO<>(clientDataDTO);
     }
 
-    private ClientDataDTO clientDataDTOTransformer(ClientData clientData) {
-        return null;
-//        return mapper.modelToDTO(clientData);
+    private ClientDataDTO clientDataDTOConverter(ClientData clientData) {
+        return mapper.clientDataToDTO(clientData);
     }
 }

@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ProductDTO {
 
-    private String nome;
+    private String name;
 
     private BigDecimal price;
 
